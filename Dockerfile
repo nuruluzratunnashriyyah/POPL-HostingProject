@@ -11,8 +11,19 @@ COPY models ./models
 COPY go.sum ./
 COPY routes ./routes
 
+RUN go mod download
+
+# Salin seluruh kode aplikasi
+COPY . .
+
+# Set variabel environment
+ENV PORT=4040
+ENV DB_HOST=127.0.0.1
+ENV DB_USER=root
+ENV DB_PASS=
+
 RUN go build -o /popl-hostingproject
 
-EXPOSE 3000
+EXPOSE 4040
 
 CMD ["/popl-hostingproject"]
