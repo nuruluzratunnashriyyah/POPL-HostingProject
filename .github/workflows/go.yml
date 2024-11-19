@@ -37,4 +37,4 @@ jobs:
       uses: docker/build-push-action@v6
       with:
         push: true
-        tags: nuruluzratunnashriyyah/popl-hostingproject:latest
+        tags: nuruluzratunnashriyyah/popl-hostingproject:newest
