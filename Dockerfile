@@ -11,7 +11,7 @@ COPY models ./models
 COPY go.sum ./
 COPY routes ./routes
 
-RUN go build -o /POPL-HostingProject
+RUN go build -o /popl-hostingproject
 
 EXPOSE 3000
 
