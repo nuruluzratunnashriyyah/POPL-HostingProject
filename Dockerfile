@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY go.mod ./
 COPY *.go ./
-COPY static ./static
+COPY views ./views
 
 RUN go build -o /popl-hostingproject
 
