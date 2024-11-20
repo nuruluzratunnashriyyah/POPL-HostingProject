@@ -25,6 +25,5 @@ ENV DB_PASS=
 RUN go build -o /popl-hostingproject
 
 EXPOSE 4040
-EXPOSE 3306
 
 CMD ["/popl-hostingproject"]
