@@ -18,6 +18,19 @@ jobs:
       DB_USER: root
       DB_PASS: ""
       PORT: 4040
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: ""
+          MYSQL_DATABASE: gotodo
+        options: >
+          --health-cmd="mysqladmin ping"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=3
+        ports:
+          - 3306:3306
     steps:
     - uses: actions/checkout@v4
     
