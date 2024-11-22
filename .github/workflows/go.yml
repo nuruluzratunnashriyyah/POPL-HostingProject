@@ -26,6 +26,14 @@ jobs:
       with:
         go-version: '1.20'
 
+    - name: Start MySQL
+      uses: docker/setup-mysql-action@v2
+      with:
+        mysql-version: '8.0'
+        username: root
+        password: ""
+        database: gotodo
+        
     - name: Build
       run: go build -v ./...
 
